@@ -1,4 +1,4 @@
-# Transform 2D Points To 3D Points
+# Transform 2D Points to 3D Points
 ---
 
   Study Repository for 2D points to 3D points
