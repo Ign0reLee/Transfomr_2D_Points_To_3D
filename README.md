@@ -8,8 +8,7 @@
 
 # Enviroment
 
-  numpy
-  
+  numpy<br>
   glob
 
 ---
@@ -22,6 +21,6 @@
   python transform.py --path_2d YOUR2DPOINTSPATH --path3d YOUR3DPOINTSPATH --translate TRANSLATEFACTORYOUWANT
   ```
 
-  --path_2d   : directory path of 2d points files
-  --path_3d   : directory path of 3d points files
-  --translate : Translation factor, Default : 30
+  --path_2d   : directory path of 2d points files<br>
+  --path_3d   : directory path of 3d points files<br>
+  --translate : Translation factor, Default : 30<br>
