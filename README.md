@@ -42,16 +42,19 @@
 # WorkFlow
   
   1. Load 3D File and Translate Translat factor(just addition)<br>
+
     - in the 3D directory must be have 1 file
     - File must be formed like (index, x, y, z)
 
   2. Load 2D Files and Compute Scaling Factor between 3D points and 2D points, for each files<br>
+
     - All Files must be formed like (index, x, y)
     - Scaling Factor calculation expression is as follows:
       -  Compute Euclidean Distance Right Minimum Points to Left Maximum Points(on the x-axis)
       -  2D distance were divided into 3D distance
   
   3. Scaling 3D Points using Scaling Factor<br>
+  
     - In now, just compute multiply each.
 
   
