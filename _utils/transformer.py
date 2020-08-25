@@ -33,7 +33,7 @@ class Transformer():
         points   = Load_Data(path)
         left_2d  = Slice_Points(self.left_values, points)
         right_2d = Slice_Points(self.rgiht_values, points)
-        factor   = Calc_Sacling_Factor(left_2d, right_2d, self.left_3d. self.right_3d)
+        factor   = Calc_Sacling_Factor(left_2d, right_2d, self.left_3d, self.right_3d)
         factors  = (factor, factor, factor)
 
         scaled_points = []

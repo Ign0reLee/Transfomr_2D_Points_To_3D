@@ -1,5 +1,6 @@
 import os
 import numpy as np
+import pandas as pd
 
 def Load_Data(path):
     """
@@ -37,8 +38,6 @@ def Calc_Sacling_Factor(left2d, right2d, left3d, right3d):
     
     dist2d = np.sqrt(np.sum(np.square(sub2d)))
     dist3d = np.sqrt(np.sum(np.square(sub3d)))
-    print(dist2d)
-    print(dist3d)
     
     return dist2d/dist3d
         
@@ -91,7 +90,7 @@ def Scaling_3D(factor = (1,1,1), old_points = (0,0,0,0)):
     old_points = np.array([ox,oy,oz,1])
     new_points = np.matmul(matrix, old_points)
     
-    return new_points[:-1]
+    return new_points[:-1].astype(np.int32)
 
 def Scaling_3D_xy(factor = (1,1,1), old_points = (0,0,0,0)):
     """
@@ -116,3 +115,8 @@ def Scaling_3D_xy(factor = (1,1,1), old_points = (0,0,0,0)):
     
     return new_points[:-1]
 
+
+def make_csv(data, name, encoding="UTF-8"):
+
+    df = pd.DataFrame(data)
+    df.to_csv(os.path.join("_New_Data", name))

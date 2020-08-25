@@ -1,5 +1,6 @@
 import os, glob
 import argparse
+import time
 
 import numpy as np
 
@@ -43,7 +44,13 @@ trans = Transformer(path3d, translate_factor, left, right)
 
 
 # Main Start
+
+print("Sacling Start...")
+start = time.time()
 for path in tqdm(path2d, desc="Scaling 3D Points Now.."):
     points = trans.trans(path)
     name = path.split(separator)[-1].replace(".txt", ".csv")
     make_csv(points,name)
+
+print("Scaling End..")
+print("End Time : %.3f second"%(time.time() - start))
